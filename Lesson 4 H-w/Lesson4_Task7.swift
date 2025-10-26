@@ -7,7 +7,7 @@ func downloadFile(
 ) {
     print("Starting download of \(fileName)...")
     
-    for progress in 0...100 {
+    for progress in stride(from: 0, through: 100, by: 50) {
         onProgress(progress)
     }
     
