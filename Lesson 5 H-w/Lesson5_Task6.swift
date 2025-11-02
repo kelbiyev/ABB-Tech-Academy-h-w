@@ -26,6 +26,8 @@ struct Library {
 
     func filterBooks(using condition: (String) -> Bool) -> [String] {
         return books.keys.filter(condition)
+        //return books.keys.filter{ condition($0) }
+
     }
 }
 
