@@ -242,3 +242,42 @@ ______________________________________
 ______________________________________
 ### 31.What does the lazy keyword do?
 lazy allocates or computes property when only at its initialization 
+______________________________________
+### 32.What are the main differences between Array, Set, and Dictionary in Swift?
+Array is an ordered collection , can contain duplicates and keeps the order
+Set is an unordered collection , keeps only unique elements and automatically deletes duplicates 
+Dictionary stores key-value pairs , where each key is unique
+______________________________________
+### 33.What are property observers (willSet, didSet) and when are they useful?
+property observers let us run code 
+- when value has just changed (didset) (runs after new stored value) 
+- when value will change 
+(willset) (runs before new stored value)
+
+They are useful when you want to update log changes and etc.
+______________________________________
+### 34.How can you avoid retain cycles when using closures?
+to avoid retain cycles using closures we can use capture list `[weak self]` or `[unowned self]`
+______________________________________
+### 35.What is inheritance, and can structs use inheritance?
+Inheritance allows one class to inherit properties or methods from another class
+
+only classes can use inheritance
+
+sturcts and enums cant use inheritance but they can use protokol to "inherit"
+______________________________________
+### 36.What is method overriding, and when do you use the override keyword?
+override allows us to replace the originally behavior while we use inheritance
+
+it can be used when you want to save the action but in a different way than the "parent"
+______________________________________
+### 37.How would you prevent a class from being subclassed?
+we can prevent subclassing with `final class ... {}`
+also final can be used for methods or properties to prevent them from being overrided
+______________________________________
+### 38.What are the four main principles of Object-Oriented Programming (OOP), and how are they implemented in Swift?
+
+- `encapsulatuon` making properties `private` so they cant be changed outside 
+- `polymorphism` allows different classes to respond to the same method(action)in different way 
+- `inheritance` lets one class use or exend behavior of another 
+- `abstraction` shows us what protocol does not how
